@@ -28,7 +28,7 @@ def play():
     message = ''
 
     while(not isWinner):
-      clear()
+      # clear()
       print("Total hints: ", numOfHint)
       print("Number of wrong guesses: ", numOfWrongGuess)
       if message:
@@ -50,7 +50,7 @@ def play():
           if int(option) == 1:
             while True:
               guess = input("Please enter your guess letter: ")
-              if guess.isalpha() and len(guess) == 1 :
+              if guess.isalpha() or guess == " " and len(guess) == 1 :
                 try:
                   if randomWord.index(guess) > -1:
                     letterIndices = [i for i in range(len(randomWord)) if randomWord.startswith(guess, i)]
