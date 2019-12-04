@@ -6,7 +6,7 @@ from subprocess import call
 # define clear function 
 def clear(): 
     # check and make call for specific operating system 
-    _ = call('clear' if os.name =='posix' else 'cls')
+  _ = call('clear' if os.name =='posix' else 'cls')
 
 def printPlaceHolder(s):
   print(' '.join([ s for s in s]))
